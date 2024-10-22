@@ -3,6 +3,7 @@ package Pert5;
 import java.util.Scanner;
 
 public class ForOddEven {
+    @SuppressWarnings("resource")
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
