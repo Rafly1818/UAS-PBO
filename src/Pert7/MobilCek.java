@@ -32,12 +32,6 @@ class Mobil {
 
 public class MobilCek {
     public static void main(String[] args) {
-        Mobil mobil = new Mobil("Toyota", 2022, 300000000);
-        System.out.println("Merk Mobil: " + mobil.merk);
-        System.out.println("Tahun Produksi Mobil: " + mobil.tahunProduksi);
-        System.out.println("Harga Mobil: " + mobil.getHarga());
-        mobil.setHarga(350000000);
-        System.out.println("Harga Mobil Setelah diubah: " + mobil.getHarga());
-        mobil.tampilkanInfoMobil();
+        
     }
 }
