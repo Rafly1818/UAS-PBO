@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         
         //====================Mahasiswa====================
-        System.out.print("\033[H\033[2J");
+        System.out.println("====================Mahasiswa====================");
 
         // Membuat objek Mahasiswa
         Mahasiswa mahasiswa1 = new Mahasiswa("ANDI", 21, "TEKNIK INFORMATIKA");
@@ -28,6 +28,7 @@ public class Main {
 
         //====================Siswa====================
          // Membuat objek Siswa
+         System.out.println("====================Siswa====================");
          Siswa siswa1 = new Siswa("Andi", 85);
          siswa1.tampilkanInfo();
  
@@ -44,6 +45,7 @@ public class Main {
 
 
         //====================Mobil====================
+        System.out.println("====================Mobil====================");
         Mobil mobil = new Mobil("Toyota", 2022, 300000000);
         System.out.println("Merk Mobil: " + mobil.merk);
         System.out.println("Tahun Produksi Mobil: " + mobil.tahunProduksi);

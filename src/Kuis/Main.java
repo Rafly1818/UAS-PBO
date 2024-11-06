@@ -9,7 +9,7 @@ public class Main {
         AlatTulis penghapus = new AlatTulis("Penghapus", 10, 500);
 
         // Menampilkan header
-        System.out.println("=== Daftar Alat Tulis ===");
+        System.out.println("\n===============Alat Tulis===============\n");
 
         // Menampilkan data masing-masing alat tulis
         bolpoint.tampilkanData();
@@ -24,7 +24,7 @@ public class Main {
         System.out.println("\nTotal Nilai Inventaris: Rp. " + totalInventaris);
 
         // Bagian 2: Perpustakaan
-        System.out.println("\n=================Perpustakaan===================");
+        System.out.println("\n=================Perpustakaan===================\n");
         Perpustakaan perpus = new Perpustakaan();
         
         // Menambah buku
