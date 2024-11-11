@@ -1,0 +1,86 @@
+@startuml
+
+class Mahasiswa {
+  -nama: String
+  -nim: String
+  -usia: int
+  -jurusan: Jurusan
+  -kelasList: List<Kelas>
+  +Mahasiswa(nama: String, nim: String, usia: int, jurusan: Jurusan)
+  +getNama(): String
+  +setNama(nama: String): void
+  +getKelasList(): List<Kelas>
+  +addKelas(kelas: Kelas): void
+  +displayInfo(): void
+}
+
+class Kelas {
+  -namaKelas: String
+  -kodeKelas: String
+  -mahasiswaList: List<Mahasiswa>
+  +Kelas(namaKelas: String, kodeKelas: String)
+  +getNamaKelas(): String
+  +setNamaKelas(namaKelas: String): void
+  +getKodeKelas(): String
+  +setKodeKelas(kodeKelas: String): void
+  +getMahasiswaList(): List<Mahasiswa>
+  +addMahasiswa(mahasiswa: Mahasiswa): void
+  +displayInfo(): void
+}
+
+class Jurusan {
+  -nama: String
+  -kode: String
+  +Jurusan(nama: String, kode: String)
+  +getNama(): String
+  +setNama(nama: String): void
+  +getKode(): String
+  +setKode(kode: String): void
+  +displayInfo(): void
+}
+
+Mahasiswa "*" -- "*" Kelas : enrolls in >
+Mahasiswa "1" -- "1" Jurusan : has >
+
+' Diagram 4 - Sistem Akademik Lengkap
+
+class Mahasiswa {
+  -nama: String
+  -nim: String
+  -dosenWali: Dosen
+  -mataKuliahList: List<MataKuliah>
+  +Mahasiswa(nama: String, nim: String)
+  +getNama(): String
+  +getNim(): String
+  +getDosenWali(): Dosen
+  +setDosenWali(dosenWali: Dosen): void
+  +addMataKuliah(mataKuliah: MataKuliah): void
+  +displayInfo(): void
+}
+
+class Dosen {
+  -nama: String
+  -nip: String
+  -mahasiswaWaliList: List<Mahasiswa>
+  +Dosen(nama: String, nip: String)
+  +getNama(): String
+  +getNip(): String
+  +tambahMahasiswa(mahasiswa: Mahasiswa): void
+  +displayInfo(): void
+}
+
+class MataKuliah {
+  -nama: String
+  -kode: String
+  -mahasiswaList: List<Mahasiswa>
+  +MataKuliah(nama: String, kode: String)
+  +getNama(): String
+  +getKode(): String
+  +addMahasiswa(mahasiswa: Mahasiswa): void
+  +displayInfo(): void
+}
+
+Mahasiswa "*" -- "1" Dosen : has advisor >
+Mahasiswa "*" -- "*" MataKuliah : enrolls in >
+
+@enduml
