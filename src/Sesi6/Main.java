@@ -2,85 +2,68 @@ package Sesi6;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("========= DEMONSTRASI VERSI 1: PROGRAM DASAR =========");
+        // Membuat objek Mahasiswa1
+        Mahasiswa1 mahasiswa1 = new Mahasiswa1("Ahmad", "12345678", 21);
         
-        //====================Mahasiswa====================
-        System.out.println("\n====================Mahasiswa====================");
-
-        // Membuat objek Mahasiswa
-        Mahasiswa mahasiswa1 = new Mahasiswa("ANDI", 21, "TEKNIK INFORMATIKA");
-
-        // Mengakses atribut public
-        System.out.println("NAMA MAHASISWA : " + mahasiswa1.nama); // Output: Andi
-
-        // Mengakses atribut protected (dapat diakses dalam package yang sama)
-        System.out.println("USIA MAHASISWA : " + mahasiswa1.usia); // Output: 21
-
-        // Mengakses atribut private menggunakan getter
-        System.out.println("JURUSAN MAHASISWA : " + mahasiswa1.getJurusan()); // Output: Teknik Informatika
-
-        // Mengubah nilai atribut private menggunakan setter
-        mahasiswa1.setJurusan("SISTEM INFORMASI");
-        System.out.println("JURUSAN MAHASISWA SETELAH DIUBAH : " + mahasiswa1.getJurusan()); // Output: Sistem Informasi
-
-        // Menampilkan informasi lengkap mahasiswa
-        mahasiswa1.tampilkanInfo();
-
-
-        //====================Siswa====================
-         // Membuat objek Siswa
-         System.out.println("\n====================Siswa====================");
-         Siswa siswa1 = new Siswa("Andi", 85);
-         siswa1.tampilkanInfo();
- 
-         // Menggunakan setter untuk mengubah nama dan nilai ujian
-         siswa1.setNama("Budi");
-         siswa1.setNilaiUjian(95);
- 
-         // Menampilkan informasi yang telah diperbarui
-         System.out.println("\nSetelah Diubah:");
-         siswa1.tampilkanInfo();
- 
-         // Menguji validasi dengan memasukkan nilai yang tidak valid
-         siswa1.setNilaiUjian(105); // Output: Nilai harus antara 0 dan 100.
-
-
-        //====================Mobil====================
-        System.out.println("\n====================Mobil====================");
-        Mobil mobil = new Mobil("Toyota", 2022, 300000000);
-        System.out.println("Merk Mobil: " + mobil.merk);
-        System.out.println("Tahun Produksi Mobil: " + mobil.tahunProduksi);
-        System.out.println("Harga Mobil: " + mobil.getHarga());
-        mobil.setHarga(350000000);
-        System.out.println("Harga Mobil Setelah diubah: " + mobil.getHarga());
-        mobil.tampilkanInfoMobil();
-
-
-        //====================Nilai====================
-        System.out.println("\n====================Nilai====================");
-        Nilai nilai = new Nilai();
+        // Mengakses dan menampilkan data Mahasiswa1
+        System.out.println("Data awal mahasiswa:");
+        mahasiswa1.displayInfo();
         
-        // Mengisi nilai
-        nilai.setQuis(85);  // Mengisi nilai Quis
-        nilai.setUTS(70);   // Mengisi nilai UTS
-        nilai.setUAS(90);   // Mengisi nilai UAS
+        // Mengubah data Mahasiswa1
+        mahasiswa1.setNama("Budi");
+        mahasiswa1.setNim("87654321");
+        mahasiswa1.setUsia(22);
         
-        // Menampilkan hasil
-        System.out.println("Nilai Akhir: " + nilai.getNA());
-        System.out.println("Index: " + nilai.getIndex());
-        System.out.println("Keterangan: " + nilai.getKeterangan());
+        // Menampilkan data setelah diubah
+        System.out.println("\nData setelah diubah:");
+        mahasiswa1.displayInfo();
 
+        System.out.println("\n========= DEMONSTRASI VERSI 2: PROGRAM DENGAN RELASI HAS-A =========");
+        // Membuat objek Jurusan2
+        Jurusan2 jurusanInformatika = new Jurusan2("Informatika", "IF123");
+        
+        // Membuat objek Mahasiswa2 dengan Jurusan
+        Mahasiswa2 mahasiswa2 = new Mahasiswa2("Ahmad", "12345678", 21, jurusanInformatika);
+        
+        // Menampilkan data Mahasiswa2 beserta Jurusannya
+        System.out.println("Data mahasiswa dengan jurusan Informatika:");
+        mahasiswa2.displayInfo();
+        
+        // Mengubah data Jurusan Mahasiswa2
+        Jurusan2 jurusanSistemInformasi = new Jurusan2("Sistem Informasi", "SI456");
+        mahasiswa2.setJurusan(jurusanSistemInformasi);
+        
+        // Menampilkan data setelah perubahan
+        System.out.println("\nData setelah pindah jurusan:");
+        mahasiswa2.displayInfo();
 
-        //====================Nilai====================
-        System.out.println("\n====================Waktu====================");
-        Waktu waktu = new Waktu();
+        System.out.println("\n========= DEMONSTRASI VERSI 3: PROGRAM DENGAN RELASI MANY TO MANY =========");
+        // Membuat objek Jurusan3
+        Jurusan3 jurusanIF = new Jurusan3("Informatika", "IF123");
         
-        waktu.tambahJam(2);      // Menambah 2 jam
-        waktu.tambahMenit(30);   // Menambah 30 menit
-        waktu.tampilWaktu();     // Output: 2 jam 30 menit
+        // Membuat objek Mahasiswa3
+        Mahasiswa3 mahasiswa3_1 = new Mahasiswa3("Ahmad", "12345678", 21, jurusanIF);
+        Mahasiswa3 mahasiswa3_2 = new Mahasiswa3("Budi", "87654321", 22, jurusanIF);
         
-        waktu.tambahWaktu(1, 15); // Menambah 1 jam 15 menit
-        waktu.tampilWaktu();      // Output: 3 jam 45 menit
+        // Membuat objek Kelas3
+        Kelas3 kelasPemrograman = new Kelas3("Pemrograman Java", "PJ101");
+        Kelas3 kelasBasisData = new Kelas3("Basis Data", "BD102");
+        
+        // Menambahkan Mahasiswa3 ke dalam Kelas3
+        kelasPemrograman.addMahasiswa(mahasiswa3_1);
+        kelasPemrograman.addMahasiswa(mahasiswa3_2);
+        kelasBasisData.addMahasiswa(mahasiswa3_1);
+        
+        // Menampilkan data Kelas3 dan Mahasiswa3
+        System.out.println("Informasi Mahasiswa:");
+        mahasiswa3_1.displayInfo();
+        System.out.println();
+        mahasiswa3_2.displayInfo();
+        
+        System.out.println("\nInformasi Kelas:");
+        kelasPemrograman.displayInfo();
+        System.out.println();
+        kelasBasisData.displayInfo();
     }
 }
-    
-
