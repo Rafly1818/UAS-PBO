@@ -1,5 +1,12 @@
 package Sesi6;
 
+import Sesi6.Tugas1.Mahasiswa1;
+import Sesi6.Tugas2.Jurusan2;
+import Sesi6.Tugas2.Mahasiswa2;
+import Sesi6.Tugas3.Jurusan3;
+import Sesi6.Tugas3.Kelas3;
+import Sesi6.Tugas3.Mahasiswa3;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("========= DEMONSTRASI VERSI 1: PROGRAM DASAR =========");

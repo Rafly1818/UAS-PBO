@@ -1,4 +1,4 @@
-package Sesi6;
+package Sesi6.Tugas3;
 
 import java.util.ArrayList;
 import java.util.List;

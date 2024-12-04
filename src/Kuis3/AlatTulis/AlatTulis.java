@@ -1,4 +1,4 @@
-package Kuis3;
+package Kuis3.AlatTulis;
 
 public class AlatTulis {
     private String nama;

@@ -1,4 +1,4 @@
-package Sesi6;
+package Sesi6.Tugas2;
 
 public class Mahasiswa2 {
     private String nama;

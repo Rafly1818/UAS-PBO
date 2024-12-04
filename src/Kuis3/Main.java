@@ -1,5 +1,9 @@
 package Kuis3;
 
+import Kuis3.AlatTulis.AlatTulis;
+import Kuis3.Perpustakaan.Perpustakaan;
+import Kuis3.Perpustakaan.Buku;
+
 public class Main {
     public static void main(String[] args) {
         // Bagian 1: Alat Tulis

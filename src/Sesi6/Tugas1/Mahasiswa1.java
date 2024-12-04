@@ -1,4 +1,4 @@
-package Sesi6;
+package Sesi6.Tugas1;
 
 public class Mahasiswa1 {
     // Atribut private

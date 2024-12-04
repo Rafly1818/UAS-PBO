@@ -1,12 +1,11 @@
+package Sesi6.Tugas3;
 
-package Sesi6;
-
-public class Jurusan2 {
+public class Jurusan3 {
     private String nama;
     private String kode;
 
     // Constructor
-    public Jurusan2(String nama, String kode) {
+    public Jurusan3(String nama, String kode) {
         this.nama = nama;
         this.kode = kode;
     }
