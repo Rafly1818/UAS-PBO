@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.PolimorfismeDinamis.Gambar;
+package Sesi11.Polimorfisme.Dinamis.Gambar;
 
 public class Bentuk {
     protected void gambar() {

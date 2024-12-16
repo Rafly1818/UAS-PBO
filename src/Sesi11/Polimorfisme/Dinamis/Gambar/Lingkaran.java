@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.PolimorfismeDinamis.Gambar;
+package Sesi11.Polimorfisme.Dinamis.Gambar;
 
 public class Lingkaran extends Bentuk {
     protected void gambar() {

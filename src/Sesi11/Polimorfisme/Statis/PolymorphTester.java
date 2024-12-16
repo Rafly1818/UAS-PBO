@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.PolimorfismeStatis;
+package Sesi11.Polimorfisme.Statis;
 
 class Polymorph {
     public int tambah(int x, int y) {

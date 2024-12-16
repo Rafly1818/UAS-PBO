@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.PolimorfismeStatis;
+package Sesi11.Polimorfisme.Statis;
 
 public class Lingkaran {
     //Method menghitung luas dengan jari-jari
