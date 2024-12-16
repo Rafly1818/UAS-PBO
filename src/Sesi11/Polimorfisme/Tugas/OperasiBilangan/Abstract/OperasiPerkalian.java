@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.Tugas;
+package Sesi11.Polimorfisme.Tugas.OperasiBilangan.Abstract;
 
 public class OperasiPerkalian extends OperasiBilanganAbs {
     @Override

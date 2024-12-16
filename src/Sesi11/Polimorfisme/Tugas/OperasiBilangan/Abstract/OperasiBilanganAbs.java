@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.Tugas;
+package Sesi11.Polimorfisme.Tugas.OperasiBilangan.Abstract;
 
 public abstract class OperasiBilanganAbs {
     protected double a, b, c;

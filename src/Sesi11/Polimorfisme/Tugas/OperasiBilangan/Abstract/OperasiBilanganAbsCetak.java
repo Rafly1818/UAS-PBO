@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.Tugas;
+package Sesi11.Polimorfisme.Tugas.OperasiBilangan.Abstract;
 
 public final class OperasiBilanganAbsCetak {
     public void cetakSemua(OperasiBilanganAbs[] OB, double a, double b) {

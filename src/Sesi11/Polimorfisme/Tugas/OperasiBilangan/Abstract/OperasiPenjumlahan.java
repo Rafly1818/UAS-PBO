@@ -1,6 +1,6 @@
-package Sesi11.Polimorfisme.Tugas;
+package Sesi11.Polimorfisme.Tugas.OperasiBilangan.Abstract;
 
-public class OperasiPengurangan extends OperasiBilanganAbs {
+public class OperasiPenjumlahan extends OperasiBilanganAbs {
     @Override
     public void set_A(double a) {
         this.a = a;
@@ -13,7 +13,7 @@ public class OperasiPengurangan extends OperasiBilanganAbs {
 
     @Override
     public void set_C() {
-        this.c = this.a - this.b;
+        this.c = this.a + this.b;
     }
 
     @Override
@@ -33,6 +33,6 @@ public class OperasiPengurangan extends OperasiBilanganAbs {
 
     @Override
     public void tampil() {
-        System.out.println("Hasil Pengurangan: " + this.get_C());
+        System.out.println("Hasil Penjumlahan: " + this.get_C());
     }
 }

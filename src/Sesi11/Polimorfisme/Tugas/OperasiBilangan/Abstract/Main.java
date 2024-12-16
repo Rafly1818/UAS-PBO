@@ -1,4 +1,4 @@
-package Sesi11.Polimorfisme.Tugas;
+package Sesi11.Polimorfisme.Tugas.OperasiBilangan.Abstract;
 
 public class Main {
     public static void main(String[] args) {
